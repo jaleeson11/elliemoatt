@@ -138,8 +138,8 @@ add_action( 'widgets_init', 'elliemoatt_widgets_init' );
  * Enqueue scripts and styles.
  */
 function elliemoatt_scripts() {
-	wp_enqueue_style( 'elliemoatt-style', get_stylesheet_uri(), array(), _S_VERSION );
-	wp_style_add_data( 'elliemoatt-style', 'rtl', 'replace' );
+	wp_enqueue_style( 'elliemoatt-styles', get_template_directory_uri() . '/dist/style.css', array(), _S_VERSION );
+	wp_enqueue_script( 'elliemoatt-scripts', get_template_directory_uri() . '/dist/app.js', array( 'jquery' ), _S_VERSION, true );
 
 	wp_enqueue_script( 'elliemoatt-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
 
