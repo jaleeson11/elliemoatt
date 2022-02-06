@@ -138,6 +138,7 @@ add_action( 'widgets_init', 'elliemoatt_widgets_init' );
  * Enqueue scripts and styles.
  */
 function elliemoatt_scripts() {
+	wp_enqueue_style( 'dashicons' );
 	wp_enqueue_style( 'elliemoatt-styles', get_template_directory_uri() . '/dist/style.css', array(), _S_VERSION );
 	wp_enqueue_script( 'elliemoatt-scripts', get_template_directory_uri() . '/dist/app.js', array( 'jquery' ), _S_VERSION, true );
 

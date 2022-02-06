@@ -12,18 +12,23 @@
 		return;
 	}
 
-	const button = siteNavigation.getElementsByTagName( 'button' )[ 0 ];
+	const openToggle = siteNavigation.querySelector('open');
 
-	// Return early if the button doesn't exist.
-	if ( 'undefined' === typeof button ) {
+	// Return early if the openToggle doesn't exist.
+	if ( 'undefined' === typeof openToggle ) {
 		return;
 	}
 
 	const menu = siteNavigation.getElementsByTagName( 'ul' )[ 0 ];
 
-	// Hide menu toggle button if menu is empty and return early.
+	// Add close toggle to menu.
+	const closeToggle = document.createElement( 'span' );
+	closeToggle.classList.add( 'dashicons', 'dashicons-no-alt', 'menu-toggle', 'close' );
+	menu.appendChild( closeToggle );
+	
+	// Hide menu toggle openToggle if menu is empty and return early.
 	if ( 'undefined' === typeof menu ) {
-		button.style.display = 'none';
+		openToggle.style.display = 'none';
 		return;
 	}
 
@@ -31,26 +36,30 @@
 		menu.classList.add( 'nav-menu' );
 	}
 
-	// Toggle the .toggled class and the aria-expanded value each time the button is clicked.
-	button.addEventListener( 'click', function() {
-		siteNavigation.classList.toggle( 'toggled' );
+	const toggles = siteNavigation.querySelectorAll('.menu-toggle');
 
-		if ( button.getAttribute( 'aria-expanded' ) === 'true' ) {
-			button.setAttribute( 'aria-expanded', 'false' );
-		} else {
-			button.setAttribute( 'aria-expanded', 'true' );
-		}
+	// Toggle the .toggled class each time a toggle is clicked.
+	toggles.forEach( toggle => {
+		toggle.addEventListener( 'click', function() {
+			siteNavigation.classList.toggle( 'toggled' );
+
+			if ( siteNavigation.classList.contains( 'toggled' ) ) {
+				document.body.style.overflowY = 'hidden';
+			} else {
+				document.body.style.overflowY = 'visible';
+			}
+		} );
 	} );
 
 	// Remove the .toggled class and set aria-expanded to false when the user clicks outside the navigation.
-	document.addEventListener( 'click', function( event ) {
-		const isClickInside = siteNavigation.contains( event.target );
+	// document.addEventListener( 'click', function( event ) {
+	// 	const isClickInside = siteNavigation.contains( event.target );
 
-		if ( ! isClickInside ) {
-			siteNavigation.classList.remove( 'toggled' );
-			button.setAttribute( 'aria-expanded', 'false' );
-		}
-	} );
+	// 	if ( ! isClickInside ) {
+	// 		siteNavigation.classList.remove( 'toggled' );
+	// 		openToggle.setAttribute( 'aria-expanded', 'false' );
+	// 	}
+	// } );
 
 	// Get all the link elements within the menu.
 	const links = menu.getElementsByTagName( 'a' );
@@ -97,3 +106,5 @@
 		}
 	}
 }() );
+
+
