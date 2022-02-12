@@ -18,8 +18,6 @@ $color__link-visited: #800080; //purple
 $color__link-hover: #191970; //midnightblue
 $color__text-main: #000;
 
-$color__border-button: #ccc #ccc #bbb;
-$color__border-button-hover: #ccc #bbb #aaa;
-$color__border-button-focus: #aaa #bbb #bbb;
+$color__border-button: $color__brand-green;
 $color__border-input: #ccc;
 $color__border-abbr: #666;
