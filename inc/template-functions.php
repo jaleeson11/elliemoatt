@@ -35,3 +35,37 @@ function elliemoatt_pingback_header() {
 	}
 }
 add_action( 'wp_head', 'elliemoatt_pingback_header' );
+
+/**
+ * Returns theme hero banner.
+ * 
+ * @param int $page_id Page ID.
+ */
+function elliemoatt_hero( $page_id ) { ?>
+	<div class="site-hero">
+		<div class="site-hero__column site-hero__column--image" style="background-image: url('<?php the_field( 'banner_image', $page_id ); ?>');"></div>
+		<div class="site-hero__column site-hero__column--content">
+			<div class="site-hero__content">
+				<h1>
+					<?php 
+					if ( get_field( 'banner_heading', $page_id ) ) {
+						the_field( 'banner_heading', $page_id );
+					} else {
+						echo wp_kses_post( get_the_title( $page_id ) );
+					}
+					?>
+				</h1>
+				<p>
+					<?php
+					if ( get_field( 'banner_text', $page_id ) ) {
+						the_field( 'banner_text', $page_id );
+					} else {
+						echo wp_kses_post( get_the_excerpt( $page_id ) );
+					}
+					?>
+				</p>
+			</div>
+		</div>
+	</div>
+	<?php 
+}

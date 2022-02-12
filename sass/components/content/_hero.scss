@@ -1,0 +1,48 @@
+.site-hero {
+	display: flex;
+
+	> .site-hero__column {
+		flex: 50%;
+		min-height: 550px;
+
+		&.site-hero__column--content {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			background: $color__brand-pink;
+
+			> .site-hero__content {
+				width: 80%;
+
+				> p {
+					display: -webkit-box;
+					overflow: hidden;
+					-webkit-line-clamp: 6;
+					-webkit-box-orient: vertical;
+				}
+			}
+		}
+
+		&.site-hero__column--image {
+			background-size: cover;
+ 			background-repeat: no-repeat;
+			background-color: $color__brand-orange;
+		}
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.site-hero {
+		flex-direction: column;
+
+		> .site-hero__column {
+			min-height: 350px;
+
+			&.site-hero__column--content {
+				h1 {
+					font-size: 3.157rem;
+				}
+			}
+		}
+	}
+}
