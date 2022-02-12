@@ -15,18 +15,21 @@ get_header();
 			<section class="site-section site-section--about">
 				<div class="row align-items-center">
 					<div class="col-sm-12 col-md-6">
-						<div class="site-section__content">
-							<h2>About Me</h2>
-							<p>Vivamus suscipit tortor eget felis porttitor volutpat. Cras ultricies ligula sed magna dictum porta. Pellentesque in ipsum id orci porta dapibus. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus.</p>
-							<p>Cras ultricies ligula sed magna dictum porta. Cras ultricies ligula sed magna dictum porta. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a.</p>
-							<a href="#" class="site-button">Button</a>
+						<div class="site-section__content fade-in">
+							<h2><?php echo get_theme_mod( 'home_about_heading' ); ?></h2>
+							<p><?php echo get_theme_mod( 'home_about_text' ); ?></p>
+							<a href="<?php echo get_the_permalink( get_theme_mod( 'home_about_button_link' ) );  ?>" class="site-button">
+								<?php echo get_theme_mod( 'home_about_button_text' ); ?>
+							</a>
 						</div>
 					</div>
+					<?php if ( get_theme_mod( 'home_about_image' ) ) : ?>
 					<div class="col-sm-12 col-md-6">
 						<div class="site-section__image">
-							<img src="http://localhost/elliemoatt/wp-content/uploads/2022/02/mid-shot-woman-therapist-taking-notes-with-laptop-lap-scaled.jpg">
+							<img src="<?php echo get_theme_mod( 'home_about_image' ); ?>">
 						</div>
 					</div>
+					<?php endif; ?>
 				</div>
 			</section>
 		</div>
