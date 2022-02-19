@@ -2,9 +2,9 @@
 	display: block;
 }
 
-.post,
 .page {
-	margin: 0 0 1.5em;
+	position: relative;
+	padding-bottom: 150px;
 }
 
 .updated:not(.published) {

@@ -119,6 +119,16 @@ function elliemoatt_widgets_init() {
 			'after_title'   => '</h2>',
 		)
 	);
+
+	register_sidebar(
+		array(
+			'name'          => esc_html__( 'Footer', 'elliemoatt' ),
+			'id'            => 'footer',
+			'description'   => esc_html__( 'Add widgets here.', 'elliemoatt' ),
+			'before_widget' => '<div id="%1$s" class="widget %2$s">',
+			'after_widget'  => '</div>',
+		)
+	);
 }
 add_action( 'widgets_init', 'elliemoatt_widgets_init' );
 
