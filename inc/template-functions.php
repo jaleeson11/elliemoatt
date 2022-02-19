@@ -45,7 +45,7 @@ function elliemoatt_hero( $page_id ) { ?>
 	<div class="site-hero">
 		<div class="site-hero__column site-hero__column--image" style="background-image: url('<?php the_field( 'banner_image', $page_id ); ?>');"></div>
 		<div class="site-hero__column site-hero__column--content">
-			<div class="site-hero__content">
+			<div class="site-hero__content fade-in">
 				<h1>
 					<?php 
 					if ( get_field( 'banner_heading', $page_id ) ) {

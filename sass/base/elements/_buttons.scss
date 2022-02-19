@@ -5,7 +5,6 @@ input[type="submit"],
 .site-button {
 	font-family: $font__main;
 	font-size: 14px;
-	font-weight: 600;
 	letter-spacing: 1px;
 	text-transform: uppercase;
 	text-align: center;
@@ -13,6 +12,7 @@ input[type="submit"],
 	color: $color__text-main;
 	border: 2px solid;
 	border-color: $color__border-button;
+	background: #fff;
 	line-height: 1;
 	padding: 12px 15px;
 	transition: all 0.5s;

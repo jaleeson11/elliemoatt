@@ -13,12 +13,18 @@
 
 			> .site-hero__content {
 				width: 80%;
+				opacity: 0;
+				transition: opacity 1s;
 
 				> p {
 					display: -webkit-box;
 					overflow: hidden;
 					-webkit-line-clamp: 6;
 					-webkit-box-orient: vertical;
+				}
+
+				&.show {
+					opacity: 1;
 				}
 			}
 		}

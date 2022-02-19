@@ -25,6 +25,12 @@
 .site-section--about {
 	.site-section__content {
 		padding-right: 40px;
+		opacity: 0;
+		transition: opacity 1s;
+
+		&.show {
+			opacity: 1;
+		}
 
 		> h2 {
 			margin-top: 0;
@@ -139,8 +145,13 @@
 	.site-section--about {
 		text-align: center;
 
-		.site-section__content {
-			padding-right: 0;
+		> .row {
+			flex-direction: column-reverse;
+
+			.site-section__content {
+				padding-right: 0;
+				padding-top: 25px;
+			}
 		}
 	}
 }
