@@ -32,6 +32,43 @@ get_header();
 					<?php endif; ?>
 				</div>
 			</section>
+			
+			<section class="site-section site-section--services">
+				<div class="row g-0">
+					<?php
+					$posts = new WP_Query( array(
+						'post_type' => 'elliemoatt_service',
+						'posts_per_page' => 3
+					));
+					if ( $posts->have_posts() ) {
+						while ( $posts->have_posts() ) {
+							$posts->the_post(); ?>
+	
+							<div class="col-md-4">
+								<div class="site-section__service">
+									<div class="site-section__service-content fade-in">
+										<h3><?php the_title(); ?></h3>
+										<p><?php echo esc_html( wp_trim_words( get_the_excerpt(), 20 ) ); ?></p>
+									</div>
+								</div>
+							</div>
+							<?php
+						} ?>
+						<?php
+					} else { ?>
+						<div class="col-12">
+							<p><?php echo esc_html( 'Looks like there\'s no services to display...' ); ?></p>
+						</div>
+						<?php
+					} ?>
+				</div>
+				<div class="site-section__footer">
+					<a href="<?php the_permalink( 'services' ) ?>" class="fade-in">
+						<?php echo esc_html( 'View Services' ); ?>
+						<span class="dashicons dashicons-arrow-right-alt2"></span>
+					</a>
+				</div>
+			</section>
 		</div>
 	</main>
 
