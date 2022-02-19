@@ -171,3 +171,18 @@ function elliemoatt_redirect_service() {
 }
 add_action( 'template_redirect', 'elliemoatt_redirect_service' );
 
+/**
+ * Disable search functionality.
+ */
+function elliemoatt_disable_search( $query, $error = true ) {
+	if ( is_search() ) {
+		$query->is_search = false;   
+		$query->query_vars['s'] = false;
+		$query->query['s'] = false;
+
+		if ( $error ) {
+			$query->is_404 = true;
+		}
+	}
+}
+add_action( 'parse_query', 'elliemoatt_disable_search' ); 
