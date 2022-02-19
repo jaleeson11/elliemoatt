@@ -5,3 +5,4 @@ composer.lock
 style.css.map
 .DS_Store
 /dist
+.vscode
