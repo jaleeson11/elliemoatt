@@ -160,3 +160,14 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
 
+/**
+ * Redirect service post type single.
+ */
+function elliemoatt_redirect_service() {
+	if ( is_singular( 'elliemoatt_service' ) ) {
+		wp_safe_redirect( home_url(), 301 );
+		exit;
+	}
+}
+add_action( 'template_redirect', 'elliemoatt_redirect_service' );
+
