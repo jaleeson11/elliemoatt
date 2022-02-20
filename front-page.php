@@ -36,10 +36,12 @@ get_header();
 			<section class="site-section site-section--services">
 				<div class="row g-0">
 					<?php
-					$posts = new WP_Query( array(
-						'post_type' => 'elliemoatt_service',
-						'posts_per_page' => 3
-					));
+					$posts = new WP_Query(
+						array(
+							'post_type'      => 'elliemoatt_service',
+							'posts_per_page' => 3
+						)
+					);
 					if ( $posts->have_posts() ) {
 						while ( $posts->have_posts() ) {
 							$posts->the_post(); ?>
@@ -53,10 +55,9 @@ get_header();
 								</div>
 							</div>
 							<?php
-						} ?>
-						<?php
+						} 
 					} else { ?>
-						<div class="col-12">
+						<div class="site-no-services">
 							<p><?php echo esc_html( 'Looks like there\'s no services to display...' ); ?></p>
 						</div>
 						<?php
