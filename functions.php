@@ -196,3 +196,11 @@ function elliemoatt_disable_search( $query, $error = true ) {
 	}
 }
 add_action( 'parse_query', 'elliemoatt_disable_search' ); 
+
+/**
+ * Add ellipses to end of post excerpt.
+ */
+function elliemoatt_excerpt_more() {
+	return '...';
+}
+add_filter( 'excerpt_more', 'elliemoatt_excerpt_more' );
