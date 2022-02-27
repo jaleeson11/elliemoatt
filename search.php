@@ -1,6 +1,7 @@
 <?php
 /**
- * The template for displaying search results pages
+ * The template for displaying search results pages 
+ * (search functionality has been disabled for this theme)
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#search-result
  *
@@ -12,7 +13,8 @@ get_header();
 
 	<main id="primary" class="site-main">
 
-		<?php if ( have_posts() ) : ?>
+		<div class="container">
+			<?php if ( have_posts() ) : ?>
 
 			<header class="page-header">
 				<h1 class="page-title">
@@ -39,15 +41,15 @@ get_header();
 
 			the_posts_navigation();
 
-		else :
+			else :
 
 			get_template_part( 'template-parts/content', 'none' );
 
-		endif;
-		?>
+			endif;
+			?>
+		</div><!-- container -->
 
 	</main><!-- #main -->
 
 <?php
-get_sidebar();
 get_footer();
