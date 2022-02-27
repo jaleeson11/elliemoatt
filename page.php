@@ -32,13 +32,5 @@ get_header();
 
 	</main><!-- #main -->
 
-	<style>
-		<?php if ( get_field( 'banner_heading' ) ) : ?>
-		.page .entry-title {
-			display: none;
-		}
-		<?php endif; ?>
-	</style>
-
 <?php
 get_footer();

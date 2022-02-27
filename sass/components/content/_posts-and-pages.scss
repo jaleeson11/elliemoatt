@@ -2,12 +2,11 @@
 	display: block;
 }
 
-.page {
-	position: relative;
-	padding-bottom: 150px;
+.updated:not(.published) {
+	display: none;
 }
 
-.updated:not(.published) {
+.page .entry-title {
 	display: none;
 }
 
