@@ -1,7 +1,7 @@
 Ellie Moatt
 ===
 
-A custom Wordpress theme built on the [underscores](https://underscores.me/) starter theme. This stylish and modern Wordpress theme is specifically tailoured to a
+A custom Wordpress theme based on the [Underscores](https://underscores.me/) starter theme. This stylish and modern Wordpress theme is specifically tailoured to a
 small services website and was originally designed and built for a private counselling website.
 
 Installation
@@ -39,3 +39,9 @@ This theme comes packed with CLI commands tailored for WordPress theme developme
 - `npm run dev` : compiles all SASS files to css and bundles all JavaScript.
 - `npm run watch` : watches all SASS and JavaScript files and compiles/bundles them when they change.
 - `npm run production` : compiles/bundles and minifies all SASS and JavaScript files for production.
+
+Credits
+---------------
+
+Based on Underscores https://underscores.me/, (C) 2012-2020 Automattic, Inc., [GPLv2 or later](https://www.gnu.org/licenses/gpl-2.0.html)
+normalize.css https://necolas.github.io/normalize.css/, (C) 2012-2018 Nicolas Gallagher and Jonathan Neal, [MIT](https://opensource.org/licenses/MIT)
