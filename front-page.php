@@ -64,7 +64,7 @@ get_header();
 					} ?>
 				</div>
 				<div class="site-section__footer">
-					<a href="<?php the_permalink( 'services' ) ?>" class="fade-in">
+					<a href="<?php the_permalink( get_page_by_path( 'services' ) ) ?>" class="fade-in">
 						<?php echo esc_html( 'View Services' ); ?>
 						<span class="dashicons dashicons-arrow-right-alt2"></span>
 					</a>
