@@ -11,13 +11,13 @@ $color__background-pre: #eee;
 $color__background-ins: #fff9c0;
 
 $color__text-screen: #21759b;
-$color__text-input: #666;
-$color__text-input-focus: #111;
-$color__link: #000;
-$color__link-visited: #000;
+$color__text-input: #000;
+$color__text-input-focus: #000;
+$color__link: $color__brand-green;
+$color__link-visited: $color__brand-green;
 $color__link-hover: $color__brand-green;
 $color__text-main: #000;
 
 $color__border-button: $color__brand-green;
-$color__border-input: #ccc;
+$color__border-input: $color__brand-orange;
 $color__border-abbr: #666;
