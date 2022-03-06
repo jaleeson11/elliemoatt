@@ -1,0 +1,61 @@
+.wpcf7 {
+	form {
+		display: inline-block;
+
+		.wpcf7-form-control-wrap {
+			display: inline-block;
+			width: 100%;
+			margin-bottom: 35px;
+	
+			input, textarea {
+				width: 100%;
+			}
+	
+			&.your-name,
+			&.your-email {
+				float: left;
+				width: 50%;
+			}
+	
+			&.your-name {
+				padding-right: 15px;
+			}
+	
+			&.your-email {
+				padding-left: 15px;
+			}
+		}
+
+		.wpcf7-submit {
+			float: right;
+		}
+		
+		&.invalid,
+		&.failed {
+			.wpcf7-response-output {
+				margin: 2em 0 1em;
+				background: $color__brand-pink;
+				border-color: $color__brand-orange;
+				padding: 10px;
+			}
+
+			.wpcf7-not-valid-tip {
+				margin-top: 5px;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.wpcf7 {
+		form {
+			.wpcf7-form-control-wrap {
+				&.your-name,
+				&.your-email {
+					width: 100%;
+					padding: 0;
+				}
+			}
+		}
+	}
+}
