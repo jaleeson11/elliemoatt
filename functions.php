@@ -7,10 +7,8 @@
  * @package Ellie_Moatt
  */
 
-if ( ! defined( '_S_VERSION' ) ) {
 if ( ! defined( 'ELLIE_MOATT_VERSION' ) ) {
 	// Replace the version number of the theme on each release.
-	define( '_S_VERSION', '1.0.0' );
 	define( 'ELLIE_MOATT_VERSION', '1.0.0' );
 }
 
