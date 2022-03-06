@@ -1,8 +1,9 @@
 Ellie Moatt
 ===
 
-A custom Wordpress theme based on the [Underscores](https://underscores.me/) starter theme. This stylish and modern Wordpress theme is specifically tailoured to a
-small services website and was originally designed and built for a private counselling website.
+> A custom Wordpress theme based on the [Underscores](https://underscores.me/) starter theme. 
+
+Originally designed & built for a private counselling site.
 
 Installation
 ---------------
