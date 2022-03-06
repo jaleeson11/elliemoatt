@@ -207,3 +207,8 @@ function elliemoatt_excerpt_more() {
 	return '...';
 }
 add_filter( 'excerpt_more', 'elliemoatt_excerpt_more' );
+
+/**
+ * Remove wrapped p tags from cf7 fields.
+ */
+add_filter('wpcf7_autop_or_not', '__return_false');
