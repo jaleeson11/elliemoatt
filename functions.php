@@ -166,9 +166,9 @@ require get_template_directory() . '/inc/customizer.php';
 /**
  * Load Jetpack compatibility file.
  */
-if ( defined( 'JETPACK__VERSION' ) ) {
-	require get_template_directory() . '/inc/jetpack.php';
-}
+// if ( defined( 'JETPACK__VERSION' ) ) {
+// 	require get_template_directory() . '/inc/jetpack.php';
+// }
 
 /**
  * Redirect service post type single.
