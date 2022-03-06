@@ -173,8 +173,13 @@ require get_template_directory() . '/inc/customizer.php';
 /**
  * Redirect service post type single.
  */
-function elliemoatt_redirect_service() {
-	if ( is_singular( 'elliemoatt_service' ) ) {
+function elliemoatt_redirect() {
+if ( is_singular( 'elliemoatt_service' ) ||
+	 is_singular( 'post' ) ||
+	 is_author() ||
+	 is_category() ||
+	 is_tag()
+	) {
 		wp_safe_redirect( home_url(), 301 );
 		exit;
 	}
