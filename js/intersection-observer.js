@@ -2,7 +2,7 @@ const elements = document.querySelectorAll('.fade-in');
 
 const options = {
 	root: null,
-	threshold: 1,
+	threshold: 1
 };
 
 const observer = new IntersectionObserver(function(entries, observer) {

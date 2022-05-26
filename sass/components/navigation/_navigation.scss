@@ -32,7 +32,6 @@
 			}
 
 			li {
-
 				&:hover > ul,
 				&.focus > ul {
 					display: block;
@@ -42,14 +41,6 @@
 
 			a {
 				width: 200px;
-			}
-
-			:hover > a,
-			.focus > a {
-			}
-
-			a:hover,
-			a.focus {
 			}
 		}
 
@@ -62,10 +53,6 @@
 	li {
 		position: relative;
 		text-align: center;
-
-		&:hover > a,
-		&.focus > a {
-		}
 	}
 
 	a {
@@ -73,17 +60,15 @@
 		padding: 10px;
 		color: $color__text-main;
 		text-decoration: none;
-	}
+		white-space: nowrap;
 
-	.current_page_item > a,
-	.current-menu-item > a,
-	.current_page_ancestor > a,
-	.current-menu-ancestor > a {
+		&:hover {
+			color: $color__brand-green;
+		}
 	}
 }
 
 @media screen and (min-width: 37.5em) {
-
 	.menu-toggle {
 		display: none;
 	}
@@ -98,7 +83,7 @@
 			justify-content: center;
 
 			> li {
-				flex: 1;
+            	flex-grow: 1;;
 			}
 		}
 	}
@@ -110,13 +95,14 @@
 			position: fixed;
 			height: 100%;
 			width: 100%;
-			opacity: 0;
 			z-index: 1;
 			top: 0;
-			left: -100%;
+			left: 0;
+			transform: translateX(-100%);
 			background: #fff;
-			transition: all 0.8s;
+			transition: transform 0.5s;
 			padding-top: 50px;
+			overflow-y: scroll;
 
 			ul {
 				display: none;
@@ -125,12 +111,21 @@
 			a {
 				font-size: 28px;
 			}
+
+			> li {
+				opacity: 0;
+				transition: opacity 1s;
+				transition-delay: 0.3s;
+			}
 		}
 
 		&.toggled {
 			ul.nav-menu {
-				opacity: 1;
-				left: 0;
+				transform: translateX(0%);
+
+				> li {
+					opacity: 1;
+				}
 			}
 		}
 	}

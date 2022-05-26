@@ -56,7 +56,7 @@ __webpack_require__.r(__webpack_exports__);
 (function ($) {
   $('p:empty').remove();
   $('p').each(function () {
-    if ($(this).text().trim().length == 0 && $(this).children == 0) {
+    if ($(this).text().trim().length == 0 && $(this).children().length == 0) {
       $(this).remove();
     }
   });

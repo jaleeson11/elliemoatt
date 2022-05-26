@@ -7,8 +7,8 @@ import './navigation.js';
 	$( 'p:empty' ).remove();
 
 	$( 'p' ).each( function() {
-		if ( $( this ).text().trim().length == 0 ) {
-			$( this ).remove()
+		if ( $( this ).text().trim().length == 0 && $( this ).children().length == 0 ) {
+			$( this ).remove();
 		}
 	});
 }(jQuery) );
