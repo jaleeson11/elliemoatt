@@ -5630,6 +5630,7 @@ input[type=submit],
   line-height: 1;
   padding: 12px 15px;
   transition: all 0.5s;
+  cursor: pointer;
 }
 button:hover,
 input[type=button]:hover,
@@ -5710,25 +5711,16 @@ textarea {
 }
 
 .wpcf7 form {
-  display: inline-block;
+  max-width: 600px;
+  margin: 0 auto;
 }
 .wpcf7 form .wpcf7-form-control-wrap {
   display: inline-block;
-  width: 100%;
   margin-bottom: 35px;
+  width: 100%;
 }
 .wpcf7 form .wpcf7-form-control-wrap input, .wpcf7 form .wpcf7-form-control-wrap textarea {
   width: 100%;
-}
-.wpcf7 form .wpcf7-form-control-wrap.your-name, .wpcf7 form .wpcf7-form-control-wrap.your-email {
-  float: left;
-  width: 50%;
-}
-.wpcf7 form .wpcf7-form-control-wrap.your-name {
-  padding-right: 15px;
-}
-.wpcf7 form .wpcf7-form-control-wrap.your-email {
-  padding-left: 15px;
 }
 .wpcf7 form .wpcf7-submit {
   float: right;

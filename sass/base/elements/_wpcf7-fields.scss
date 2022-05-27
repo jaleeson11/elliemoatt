@@ -1,28 +1,15 @@
 .wpcf7 {
 	form {
-		display: inline-block;
+		max-width: 600px;
+		margin: 0 auto;
 
 		.wpcf7-form-control-wrap {
 			display: inline-block;
-			width: 100%;
 			margin-bottom: 35px;
+			width: 100%;
 	
 			input, textarea {
 				width: 100%;
-			}
-	
-			&.your-name,
-			&.your-email {
-				float: left;
-				width: 50%;
-			}
-	
-			&.your-name {
-				padding-right: 15px;
-			}
-	
-			&.your-email {
-				padding-left: 15px;
 			}
 		}
 
