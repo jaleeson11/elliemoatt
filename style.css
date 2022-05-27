@@ -6092,6 +6092,11 @@ textarea {
     font-size: 3.157rem;
   }
 }
+@media screen and (max-width: 991px) {
+  .site-hero .site-hero__column--content h1 {
+    font-size: 3.157rem;
+  }
+}
 /* Accordion
 --------------------------------------------- */
 .site-accordion {
