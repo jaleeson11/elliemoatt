@@ -6081,7 +6081,7 @@ textarea {
   background-color: #f0d0bb;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 991px) {
   .site-hero {
     flex-direction: column;
   }
@@ -6089,11 +6089,6 @@ textarea {
     min-height: 350px;
   }
   .site-hero > .site-hero__column.site-hero__column--content h1 {
-    font-size: 3.157rem;
-  }
-}
-@media screen and (max-width: 991px) {
-  .site-hero .site-hero__column--content h1 {
     font-size: 3.157rem;
   }
 }
