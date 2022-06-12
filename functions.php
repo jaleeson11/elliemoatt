@@ -173,6 +173,7 @@ require get_template_directory() . '/inc/customizer.php';
  */
 function elliemoatt_redirect() {
 if ( is_singular( 'elliemoatt_service' ) ||
+	 is_singular( 'testimonial' ) ||
 	 is_singular( 'post' ) ||
 	 is_author() ||
 	 is_category() ||

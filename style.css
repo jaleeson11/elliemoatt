@@ -6023,6 +6023,20 @@ textarea {
   font-size: 28px;
 }
 
+.site-testimonials div[class*=col]:nth-child(4n+2) .site-card {
+  background: #fff4f0;
+}
+.site-testimonials div[class*=col]:nth-child(4n+3) .site-card {
+  background: #f0d0bb;
+}
+.site-testimonials div[class*=col]:nth-child(4n+0) .site-card {
+  background: #e5e5e5;
+}
+.site-testimonials div[class*=col]:nth-child(4n+1) .site-card {
+  background: #8f9772;
+  color: #fff;
+}
+
 @media screen and (max-width: 992px) {
   .site-section--about .site-section__image > img {
     border: 12px solid #f0d0bb;
@@ -6174,6 +6188,30 @@ textarea {
     margin-top: 2rem;
   }
 }
+/* Card
+--------------------------------------------- */
+.site-card {
+  padding: 40px;
+  background: #e5e5e5;
+  text-align: center;
+  margin-top: 30px;
+}
+.site-card .site-card__title h3 {
+  margin-top: 0;
+}
+.site-card .site-card__body {
+  min-height: 200px;
+}
+.site-card.site-card--testimonial:before {
+  font-family: "Dashicons";
+  font-size: 48px;
+  content: "\f122";
+}
+.site-card.site-card--testimonial span {
+  font-size: 18px;
+  font-weight: 600;
+}
+
 /* Comments
 --------------------------------------------- */
 .comment-content a {

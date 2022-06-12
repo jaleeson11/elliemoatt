@@ -146,6 +146,35 @@
 	}
 }
 
+.site-testimonials {
+	div[class*='col'] {
+		&:nth-child(4n+2) {
+			.site-card {
+				background: $color__brand-pink;
+			}
+		}
+
+		&:nth-child(4n+3) {
+			.site-card {
+				background: $color__brand-orange;
+			}
+		}
+
+		&:nth-child(4n+0) {
+			.site-card {
+				background: $color__brand-grey;
+			}
+		}
+
+		&:nth-child(4n+1) {
+			.site-card {
+				background: $color__brand-green;
+				color: #fff;
+			}
+		}
+	}
+}
+
 @media screen and (max-width: 992px) {
 	.site-section--about {
 		.site-section__image {

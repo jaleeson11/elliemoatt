@@ -1,0 +1,27 @@
+.site-card {
+	padding: 40px;
+	background: $color__brand-grey;
+	text-align: center;
+	margin-top: 30px;
+
+	.site-card__title h3 {
+		margin-top: 0;
+	}
+
+	.site-card__body {
+		min-height: 200px;
+	}
+
+	&.site-card--testimonial {
+		&:before {
+			font-family: 'Dashicons';
+			font-size: 48px;
+			content: '\f122';
+		}
+
+		span {
+			font-size: 18px;
+			font-weight: 600;
+		}
+	}
+}
