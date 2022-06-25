@@ -14,7 +14,6 @@ get_header();
 			<?php elliemoatt_hero( get_the_id() ); ?>
 
 			<div class="site-testimonials">
-				<div class="row">
 
 				<?php
 				$testimonials = new WP_Query(
@@ -29,8 +28,8 @@ get_header();
 						$testimonials->the_post();
 
 						?>
-						<div class="col-lg-6">
-							<div class="site-card site-card--testimonial">
+						<div class="site-card site-card--testimonial">
+							<div class="site-card__content fade-in">
 								<div class="site-card__title">
 									<h3><?php the_title(); ?></h3>
 								</div>
@@ -44,7 +43,6 @@ get_header();
 					}
 				}
 				?>
-				</div>
 			</div><!-- site-testimonials -->
 
 		</div><!-- container -->

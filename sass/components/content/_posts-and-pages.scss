@@ -147,31 +147,21 @@
 }
 
 .site-testimonials {
-	div[class*='col'] {
-		&:nth-child(4n+2) {
-			.site-card {
-				background: $color__brand-pink;
-			}
-		}
+	.site-card:nth-child(4n+2) {
+		background: $color__brand-pink;
+	}
 
-		&:nth-child(4n+3) {
-			.site-card {
-				background: $color__brand-orange;
-			}
-		}
+	.site-card:nth-child(4n+3) {
+		background: $color__brand-orange;
+	}
 
-		&:nth-child(4n+0) {
-			.site-card {
-				background: $color__brand-grey;
-			}
-		}
+	.site-card:nth-child(4n+0) {
+		background: $color__brand-grey;
+	}
 
-		&:nth-child(4n+1) {
-			.site-card {
-				background: $color__brand-green;
-				color: #fff;
-			}
-		}
+	.site-card:nth-child(4n+1) {
+		background: $color__brand-green;
+		color: #fff;
 	}
 }
 
