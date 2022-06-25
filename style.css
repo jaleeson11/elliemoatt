@@ -7424,7 +7424,7 @@ textarea {
 /* Card
 --------------------------------------------- */
 .site-card {
-  padding: 40px;
+  padding: 40px 150px 60px 150px;
   background: #e5e5e5;
   text-align: center;
   margin-top: 30px;
@@ -7432,28 +7432,26 @@ textarea {
 .site-card .site-card__title h3 {
   margin-top: 0;
 }
-.site-card .site-card__body {
-  min-height: 150px;
+.site-card.site-card--testimonial:before {
+  font-family: "Dashicons";
+  font-size: 48px;
+  content: "\f122";
 }
 .site-card.site-card--testimonial span {
   font-size: 18px;
   font-weight: 600;
 }
-.site-card.site-card--testimonial .site-card__content {
-  opacity: 0;
-  -webkit-transition: opacity 1s;
-  -o-transition: opacity 1s;
-  transition: opacity 1s;
-}
-.site-card.site-card--testimonial .site-card__content:before {
-  font-family: "Dashicons";
-  font-size: 48px;
-  content: "\f122";
-}
-.site-card.site-card--testimonial .site-card__content.show {
-  opacity: 1;
-}
 
+@media screen and (max-width: 991px) {
+  .site-card {
+    padding: 40px;
+  }
+}
+@media screen and (max-width: 425px) {
+  .site-card {
+    padding: 40px 20px;
+  }
+}
 /* Comments
 --------------------------------------------- */
 .comment-content a {

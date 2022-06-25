@@ -19,7 +19,7 @@ get_header();
 				$testimonials = new WP_Query(
 					array(
 						'post_type'      => 'testimonial',
-						'posts_per_page' => 6,
+						'posts_per_page' => 5,
 					)
 				);
 
@@ -29,14 +29,12 @@ get_header();
 
 						?>
 						<div class="site-card site-card--testimonial">
-							<div class="site-card__content fade-in">
-								<div class="site-card__title">
-									<h3><?php the_title(); ?></h3>
-								</div>
-								<div class="site-card__body">
-									<p><?php the_content(); ?></p>
-									<span><?php echo esc_html( get_post_meta( get_the_id(), '_testimonial_client_name', true ) ); ?></span>
-								</div>
+							<div class="site-card__title">
+								<h3><?php the_title(); ?></h3>
+							</div>
+							<div class="site-card__body">
+								<p><?php the_content(); ?></p>
+								<span><?php echo esc_html( get_post_meta( get_the_id(), '_testimonial_client_name', true ) ); ?></span>
 							</div>
 						</div>
 						<?php
