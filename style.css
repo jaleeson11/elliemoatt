@@ -6857,14 +6857,20 @@ textarea {
 .wpcf7 form .wpcf7-submit {
   float: right;
 }
-.wpcf7 form.invalid .wpcf7-response-output, .wpcf7 form.failed .wpcf7-response-output {
+.wpcf7 form .wpcf7-response-output {
   margin: 2em 0 1em;
-  background: #fff4f0;
-  border-color: #f0d0bb;
   padding: 10px;
+}
+.wpcf7 form.invalid .wpcf7-response-output, .wpcf7 form.failed .wpcf7-response-output {
+  background-color: #fff4f0;
+  border-color: #f0d0bb;
 }
 .wpcf7 form.invalid .wpcf7-not-valid-tip, .wpcf7 form.failed .wpcf7-not-valid-tip {
   margin-top: 5px;
+}
+.wpcf7 form.sent .wpcf7-response-output {
+  background-color: rgba(143, 151, 114, 0.3);
+  border-color: #8f9772;
 }
 
 @media screen and (max-width: 768px) {
@@ -7205,10 +7211,10 @@ textarea {
 }
 
 .site-testimonials .site-card:nth-child(4n+2) {
-  background: #fff4f0;
+  background: #f0d0bb;
 }
 .site-testimonials .site-card:nth-child(4n+3) {
-  background: #f0d0bb;
+  background: #fff4f0;
 }
 .site-testimonials .site-card:nth-child(4n+0) {
   background: #e5e5e5;

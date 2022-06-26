@@ -16,19 +16,27 @@
 		.wpcf7-submit {
 			float: right;
 		}
+
+		.wpcf7-response-output {
+			margin: 2em 0 1em;
+			padding: 10px;
+		}
 		
 		&.invalid,
 		&.failed {
 			.wpcf7-response-output {
-				margin: 2em 0 1em;
-				background: $color__brand-pink;
+				background-color: $color__brand-pink;
 				border-color: $color__brand-orange;
-				padding: 10px;
 			}
 
 			.wpcf7-not-valid-tip {
 				margin-top: 5px;
 			}
+		}
+
+		&.sent .wpcf7-response-output {
+			background-color: rgb(143, 151, 114, .3);
+			border-color: $color__brand-green;
 		}
 	}
 }
