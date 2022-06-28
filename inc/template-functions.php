@@ -59,8 +59,6 @@ function elliemoatt_hero( $page_id ) { ?>
 					<?php
 					if ( get_field( 'banner_text', $page_id ) ) {
 						the_field( 'banner_text', $page_id );
-					} else {
-						echo wp_kses_post( get_the_excerpt( $page_id ) );
 					}
 					?>
 				</p>
