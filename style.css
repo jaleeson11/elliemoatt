@@ -7292,7 +7292,7 @@ textarea {
 .site-hero > .site-hero__column.site-hero__column--content > .site-hero__content > p {
   display: -webkit-box;
   overflow: hidden;
-  -webkit-line-clamp: 6;
+  -webkit-line-clamp: 9;
   -webkit-box-orient: vertical;
 }
 .site-hero > .site-hero__column.site-hero__column--content > .site-hero__content.show {
